@@ -1,0 +1,57 @@
+
+<div class="contenedor">
+        <img class="myImg" src="../../assets/resistencias.jpg">
+
+        <mat-select class="select" placeholder="Selecciona una opción para la Banda1" [(ngModel)]="b1">
+            <mat-option *ngFor="let color of colBanda12_Ingles" 
+            [style.background-color]="color"
+            [value]="color">
+                {{color}}
+            </mat-option>        
+        </mat-select>
+        <mat-select class="select" placeholder="Selecciona una opción para la Banda2" [(ngModel)]="b2">
+            <mat-option *ngFor="let color of colBanda12_Ingles" 
+            [style.background-color]="color" 
+            [value]="color">
+                {{color}}
+            </mat-option>        
+        </mat-select>
+        <mat-select class="select" placeholder="Selecciona una opción para la Banda3" [(ngModel)]="b3">
+            <mat-option *ngFor="let color of colBanda3_Ingles" 
+             [style.background-color]="color"
+             [value]="color">
+                {{color}}
+            </mat-option>
+        </mat-select>
+        <mat-radio-group [(ngModel)]="b4">
+            <mat-radio-button *ngFor="let color of colBanda4" [value]="color">
+                {{color}}
+            </mat-radio-button>
+        </mat-radio-group>
+    <button mat-raised-button color="primary" (click)="calcularResultado()" >Calcular</button>
+    <hr>
+    <table mat-table class="table table-info">
+        <thead>
+            <tr>
+                <th>Color 1</th>
+                <th>Color 2</th>
+                <th>Color 3</th>
+                <th>Tolerancia</th>
+                <th>Valor</th>
+                <th>Minimo</th>
+                <th>Maximo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td [style.background-color]="b1">{{b1}}</td>
+                <td [style.background-color]="b2">{{b2}}</td>
+                <td [style.background-color]="b3">{{b3}}</td>
+                <td [style.background-color]="b4">{{b4}}</td>
+                <td>{{resultado}}</td>
+                <td>{{min}}</td>
+                <td>{{max}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

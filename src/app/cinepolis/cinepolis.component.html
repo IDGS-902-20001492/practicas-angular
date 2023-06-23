@@ -1,0 +1,24 @@
+<div class="contenedor">
+    <div class="row">
+            <div class="bg-primary"><h1 style="color:white;">Cinepolis</h1></div>        
+    </div>
+    <div class="row">
+            <mat-form-field>
+                <mat-label>Nombre:</mat-label>
+                <input matInput [(ngModel)]="nombre">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Número de Boletos:</mat-label>
+                <input matInput [(ngModel)]="nBoletos">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Número de personas:</mat-label>
+                <input matInput [(ngModel)]="nPersonas">
+            </mat-form-field>   
+            <mat-radio-group [(ngModel)]="tarjeta">
+                <mat-label>Tarjeta CineCo:</mat-label>
+                <mat-radio-button value="true">Si</mat-radio-button>
+                <mat-radio-button value="false">No</mat-radio-button>
+            </mat-radio-group>
+    </div>     
+</div>
