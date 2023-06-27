@@ -1,24 +1,32 @@
-<div class="contenedor">
-    <div class="row">
-            <div class="bg-primary"><h1 style="color:white;">Cinepolis</h1></div>        
-    </div>
-    <div class="row">
-            <mat-form-field>
-                <mat-label>Nombre:</mat-label>
-                <input matInput [(ngModel)]="nombre">
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Número de Boletos:</mat-label>
-                <input matInput [(ngModel)]="nBoletos">
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Número de personas:</mat-label>
-                <input matInput [(ngModel)]="nPersonas">
-            </mat-form-field>   
-            <mat-radio-group [(ngModel)]="tarjeta">
-                <mat-label>Tarjeta CineCo:</mat-label>
-                <mat-radio-button value="true">Si</mat-radio-button>
-                <mat-radio-button value="false">No</mat-radio-button>
-            </mat-radio-group>
+<div>
+    <div class="row justify-content-center">
+        <div class="col-5 bg-info contenedor border border-primary" style="padding: 15px; border-radius: 10px; margin-right: 5px;">
+                <mat-form-field>
+                    <mat-label>Nombre:</mat-label>
+                    <input matInput [(ngModel)]="nombre">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Número de Boletos:</mat-label>
+                    <input matInput [(ngModel)]="nBoletos">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Número de personas:</mat-label>
+                    <input matInput [(ngModel)]="nPersonas">
+                </mat-form-field>   
+                <br>
+                <mat-radio-group [(ngModel)]="tarjeta">
+                    <mat-label><b>Tarjeta CineCo:</b></mat-label>
+                    <mat-radio-button value="1">Si</mat-radio-button>
+                    <mat-radio-button value="0">No</mat-radio-button>
+                </mat-radio-group>
+                <br>
+                <button mat-raised-button color="primary" (click)="calcularTotal()">Calcular</button>
+        </div>
+        <div class="col-5 bg-info contenedor border border-primary" style="padding: 15px; border-radius: 10px;">
+            <h2 class="bg-primary" style="border-radius: 10px;">Resultado: </h2>
+            <h2 class="bg-info" style="border-radius: 5px;">{{resultado}}</h2>
+        </div>
     </div>     
 </div>
