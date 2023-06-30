@@ -6,17 +6,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DistModule } from './distancia/dist/dist.module';
 import { ResisModule } from './resistencias/resis/resis.module';
 import { CineModule } from './cinepolis/cine/cine.module';
+import { AppRoutingModule } from './app.routing.module';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     DistModule,
     ResisModule,
-    CineModule
+    CineModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
