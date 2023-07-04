@@ -8,6 +8,8 @@ import { ResisModule } from './resistencias/resis/resis.module';
 import { CineModule } from './cinepolis/cine/cine.module';
 import { AppRoutingModule } from './app.routing.module';
 import { MenuComponent } from './menu/menu.component';
+import { PizzaModule } from './pizzeria/pizza/pizza.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { MenuComponent } from './menu/menu.component';
     DistModule,
     ResisModule,
     CineModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PizzaModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
